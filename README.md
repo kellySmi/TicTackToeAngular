@@ -1,5 +1,5 @@
 # AngularTickTackToe
-
+This is the Angular version of the React tutorial for building a tic tac toe game.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
 
 ## Development server

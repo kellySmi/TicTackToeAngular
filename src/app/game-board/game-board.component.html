@@ -1,18 +1,18 @@
-<div>
-        <div class="status">{{status}}</div>
-        <div class="board-row">
-          <app-square></app-square>
-          <app-square></app-square>
-          <app-square></app-square>
-        </div>
-        <div class="board-row">
-          <app-square></app-square>
-          <app-square></app-square>
-          <app-square></app-square>
-        </div>
-        <div class="board-row">
-          <app-square></app-square>
-          <app-square></app-square>
-          <app-square></app-square>
-        </div>
-      </div>
+<div id="game-board">
+  <div class="status">{{status}}</div>
+  <div class="board-row">
+    <app-square [location]="0" [squareValue]=squares[0] (squareEmitter)="handleClick($event)"></app-square>
+    <app-square [location]="1" [squareValue]="squares[1]" (squareEmitter)="handleClick($event)"></app-square>
+    <app-square [location]="2" [squareValue]="squares[2]" (squareEmitter)="handleClick($event)"></app-square>
+  </div>
+  <div class="board-row">
+    <app-square [location]="3" [squareValue]="squares[3]" (squareEmitter)="handleClick($event)"></app-square>
+    <app-square [location]="4" [squareValue]="squares[4]" (squareEmitter)="handleClick($event)"></app-square>
+    <app-square [location]="5" [squareValue]="squares[5]" (squareEmitter)="handleClick($event)"></app-square>
+  </div>
+  <div class="board-row">
+    <app-square [location]="6" [squareValue]="squares[6]" (squareEmitter)="handleClick($event)"></app-square>
+    <app-square [location]="7" [squareValue]="squares[7]" (squareEmitter)="handleClick($event)"></app-square>
+    <app-square [location]="8" [squareValue]="squares[8]" (squareEmitter)="handleClick($event)"></app-square>
+  </div>
+</div>

@@ -1,3 +1,9 @@
+#game-board{
+  display:inline-block;
+  text-align: center;
+  padding-left:45%;
+  margin: auto;
+}
 .board-row:after {
   clear: both;
   content: "";
