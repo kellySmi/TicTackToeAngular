@@ -7,6 +7,7 @@ export class GameService {
   
   constructor() { }
   calculateWinner(squares: string[]): any {
+    
       const winningLines = [
         [0, 1, 2],
         [3, 4, 5],
@@ -20,6 +21,7 @@ export class GameService {
       for (let i = 0; i < winningLines.length; i++) {
         const [a, b, c] = winningLines[i];
         if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
+          console.log(squares[a]);
           return squares[a];
         }
       }

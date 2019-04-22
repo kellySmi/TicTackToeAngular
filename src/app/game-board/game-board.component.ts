@@ -18,10 +18,12 @@ export class GameBoardComponent implements OnInit {
   }
   handleClick(location: number) {
     this.squares[location] = this.xIsNext ? 'O':'X'; //assign player to square location
-    if (this.gameService.calculateWinner(this.squares)) { // check for winner
-      // return;
+    let winnerCheck = this.gameService.calculateWinner(this.squares);
+    if (winnerCheck) { // check for winner
+       this.status = winnerCheck+" has won!";
+    }else{
+      this.status = this.xIsNext ? 'Next player: X' : 'Next player: O';
+      this.xIsNext =  !this.xIsNext;
     }
-    this.status = this.xIsNext ? 'Next player: X' : 'Next player: O';
-    this.xIsNext =  !this.xIsNext;
   }
 }
