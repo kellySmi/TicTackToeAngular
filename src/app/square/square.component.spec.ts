@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SquareComponent } from './square.component';
 
 describe('SquareComponent', () => {
-  let component: SquareComponent;
+  let squareComponent: SquareComponent;
   let fixture: ComponentFixture<SquareComponent>;
 
   beforeEach(async(() => {
@@ -14,11 +14,20 @@ describe('SquareComponent', () => {
 
   beforeEach(() => {
     fixture = TestBed.createComponent(SquareComponent);
-    component = fixture.componentInstance;
+    squareComponent = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should be created', () => {
+    expect(squareComponent).toBeTruthy();
+  });
+  it('should have a location ', () => {
+    expect(squareComponent.location).toBeDefined;
+  });
+  it('should have a square value ', () => {
+    expect(squareComponent.squareValue).toBeDefined;
+  });
+  it('should have a selectSquare function', () => {
+    expect(squareComponent.selectSquare).toBeDefined;
   });
 });

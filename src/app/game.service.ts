@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class GameService {
   constructor() { }
+  
   calculateWinner(squares: string[]): any {
     const winningLines = [
       [0, 1, 2],
