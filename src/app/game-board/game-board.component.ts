@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { SquareComponent } from '../square/square.component';
 import { GameService } from '../game.service';
 
-const squares = Array(9).fill(null);
 @Component({
   selector: 'app-game-board',
   templateUrl: './game-board.component.html',
@@ -10,12 +8,10 @@ const squares = Array(9).fill(null);
 })
 export class GameBoardComponent implements OnInit {
   status = 'Next player: X';
-  squares: string[] = Array(9);
+  squares: string[] = Array(9).fill(null);
   xIsNext: boolean = true; 
   constructor(private gameService: GameService) { }
-  ngOnInit() {
-    this.squares.fill("");
-  }
+  ngOnInit() {}
   handleClick(location: number) {
     this.squares[location] = this.xIsNext ? 'X':'O'; //assign player to square location
     let winnerCheck = this.gameService.calculateWinner(this.squares);
