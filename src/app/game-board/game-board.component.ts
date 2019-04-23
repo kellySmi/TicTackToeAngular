@@ -14,7 +14,7 @@ export class GameBoardComponent implements OnInit {
   constructor(private gameService: GameService) { }
   ngOnInit() {}
   handleClick(location: number) {
-    if(!this.squares[location]){
+    if(!this.squares[location] && this.status.indexOf("has won!") === -1 ){ /// make sure the square haasn't been selected already and the game is still on
       this.squares[location] = this.xIsNext  ? 'X':'O'; //assign player to square location
       let winnerCheck = this.gameService.calculateWinner(this.squares);
       if (winnerCheck) { // check for winner

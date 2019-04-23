@@ -1,7 +1,7 @@
 #game-board{
   display:inline-block;
   text-align: center;
-  padding-left:45%;
+  padding-left:42%;
   margin: auto;
 }
 .board-row:after {

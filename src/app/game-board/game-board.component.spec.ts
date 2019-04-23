@@ -45,4 +45,12 @@ describe('GameBoardComponent', () => {
     gameboardComponent.handleClick(4);
     expect(gameboardComponent.squares[4]).toEqual('X'); 
   });
+  it('resetBoard function should reset values', () => {
+    gameboardComponent.resetBoard();
+    expect(gameboardComponent.status).toEqual('Next player: X');
+    expect(gameboardComponent.squares.length).toEqual(9);
+    expect(gameboardComponent.squares.filter(s => s=='').length).toEqual(0);
+    expect(gameboardComponent.xIsNext).toEqual(true);  
+    expect(gameboardComponent.gameOver).toEqual(false);
+  });
 });
