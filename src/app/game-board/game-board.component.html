@@ -15,4 +15,4 @@
     <app-square [location]="7" [squareValue]="squares[7]" (squareEmitter)="handleClick($event)"></app-square>
     <app-square [location]="8" [squareValue]="squares[8]" (squareEmitter)="handleClick($event)"></app-square>
   </div>
-</div>
+  <button *ngIf="gameOver" #squaresReset (click)="resetBoard()">Reset</button>
